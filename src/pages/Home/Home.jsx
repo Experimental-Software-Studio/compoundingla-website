@@ -1,4 +1,7 @@
 import React from 'react';
+import ServiceCard from './ServiceCard';
+import services from '../../assets/services';
+import TestimonialImage from '../../assets/testimonial.jpg';
 import './Home.scss';
 
 const Home = () => {
@@ -7,16 +10,21 @@ const Home = () => {
             <div id="hero" className="section">
             </div>
             <div id="services" className="section">
-                services
+                <h2 className="highlight">SERVICES</h2>
+                <div className="list">
+                    {services.map(service => (<ServiceCard key={service.link} {...service}/>))}
+                </div>
             </div>
             <div id="testimonials" className="section">
-                testimonials
+                <h2 className="highlight">TESTIMONIALS</h2>
+
+                <img src={TestimonialImage} alt="testimonials"/>
             </div>
             <div id="about-us" className="section">
-                about us
+                <h2 className="highlight">ABOUT US</h2>
             </div>
             <div id="contact-us" className="section">
-                contact us
+                <h2 className="highlight">CONTACT US</h2>
             </div>
         </div>
     )

@@ -3,16 +3,37 @@
         background-color: var(--bg-secondary);
     }
     & #services{
+        & .list{
+            display: grid;
+            grid-template-columns: repeat(4, auto);
+            place-content: center;
+            background: linear-gradient(180deg, #FFFFFF00 35%, var(--bg-secondary) 0%);
+        }
     }
     & #testimonials{
+        place-content: center;
+        & img{
+            width: 60vw;
+        }
     }
     & #about-us{
+
     }
     & #contact-us{
        
     }
     & .section{
+        display: grid;
         padding-top: 150px;
         height: calc(100vh - 150px);
+        & h2{
+            color: var(--text-header);
+            margin: 0 auto;
+            text-align: center;
+            font-size: 3rem;
+            width: auto;
+            height: 3.6rem;
+            padding: 0px 20px;
+        }
     }
 }

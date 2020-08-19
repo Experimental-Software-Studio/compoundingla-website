@@ -8,6 +8,7 @@ import Testing from './pages/Testing';
 import Navigation from './Navigation';
 import Footer from './Footer';
 import './App.css';
+import Immunization from './pages/Immunization/Immunization';
 
 const App = () => {
 	return (
@@ -16,6 +17,7 @@ const App = () => {
 			<Switch>
 				<Route path='/refill' component={Refill} />
 				<Route path='/compounding' component={Compounding} />
+				<Route path='/immunization' component={Immunization} />
 				<Route path='/consultation' component={Consultation} />
 				<Route path='/testing' component={Testing} />
 				<Route component={Home} />
