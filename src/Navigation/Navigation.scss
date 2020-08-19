@@ -1,0 +1,38 @@
+.navigation--wrapper{
+    position: sticky;
+    top: 0px;
+    height: 100px;
+    padding: 20px 40px;
+    display: grid;
+    grid-template-columns: 310px 1fr repeat(5, auto);
+    column-gap: 40px;
+    background-color: var(--bg-primary);
+
+
+    & img{
+        height: 100%;
+    }
+    & button{
+        display: grid;
+        place-items: center;
+        border: none;
+        background-color: transparent;
+        a.btn{
+            color: var(--text-secondary);
+            background-color: var(--bg-secondary);
+            padding: 10px 20px;
+            border-radius: 10px;
+        }
+    }
+    & a{
+        display: grid;
+        place-items: center;
+        color: var(--text-primary);
+        text-decoration: none;
+        font-size: 1.2rem;
+        &:focus{
+            outline: 0;
+            text-decoration: underline;
+        }
+    }
+}

@@ -1,0 +1,18 @@
+.home--wrapper{
+    & #hero{
+        background-color: var(--bg-secondary);
+    }
+    & #services{
+    }
+    & #testimonials{
+    }
+    & #about-us{
+    }
+    & #contact-us{
+       
+    }
+    & .section{
+        padding-top: 150px;
+        height: calc(100vh - 150px);
+    }
+}
