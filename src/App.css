@@ -1,0 +1,11 @@
+.site {
+	color: white;
+	display: grid;
+	height: 100vh;
+	width: 100vw;
+	place-items: center;
+	text-align: center;
+	max-width: 500px;
+	font-size: 1.2rem;
+	margin: 0 auto;
+}
