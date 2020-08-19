@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/compoundingla-website/static/css/main.f46e049b.chunk.css",
+    "main.js": "/compoundingla-website/static/js/main.37bd3fce.chunk.js",
+    "main.js.map": "/compoundingla-website/static/js/main.37bd3fce.chunk.js.map",
+    "runtime-main.js": "/compoundingla-website/static/js/runtime-main.41834fd7.js",
+    "runtime-main.js.map": "/compoundingla-website/static/js/runtime-main.41834fd7.js.map",
+    "static/js/2.a4bea83c.chunk.js": "/compoundingla-website/static/js/2.a4bea83c.chunk.js",
+    "static/js/2.a4bea83c.chunk.js.map": "/compoundingla-website/static/js/2.a4bea83c.chunk.js.map",
+    "index.html": "/compoundingla-website/index.html",
+    "precache-manifest.bc6ae8082d2273e5cf71edc0c7ffc435.js": "/compoundingla-website/precache-manifest.bc6ae8082d2273e5cf71edc0c7ffc435.js",
+    "service-worker.js": "/compoundingla-website/service-worker.js",
+    "static/css/main.f46e049b.chunk.css.map": "/compoundingla-website/static/css/main.f46e049b.chunk.css.map",
+    "static/js/2.a4bea83c.chunk.js.LICENSE.txt": "/compoundingla-website/static/js/2.a4bea83c.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.41834fd7.js",
+    "static/js/2.a4bea83c.chunk.js",
+    "static/css/main.f46e049b.chunk.css",
+    "static/js/main.37bd3fce.chunk.js"
+  ]
+}
