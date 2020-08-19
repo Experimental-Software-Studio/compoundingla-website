@@ -6,6 +6,7 @@ import Compounding from './pages/Compounding';
 import Consultation from './pages/Consultation';
 import Testing from './pages/Testing';
 import Navigation from './Navigation';
+import Footer from './Footer';
 import './App.css';
 
 const App = () => {
@@ -19,6 +20,7 @@ const App = () => {
 				<Route path='/testing' component={Testing} />
 				<Route component={Home} />
 			</Switch>
+			<Footer />
 		</BrowserRouter>
 	);
 }

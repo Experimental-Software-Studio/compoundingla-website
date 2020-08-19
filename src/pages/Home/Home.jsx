@@ -1,5 +1,4 @@
 import React from 'react';
-import Footer from '../Footer';
 import './Home.scss';
 
 const Home = () => {
@@ -19,7 +18,6 @@ const Home = () => {
             <div id="contact-us" className="section">
                 contact us
             </div>
-            <Footer />
         </div>
     )
 }

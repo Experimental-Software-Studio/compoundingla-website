@@ -4,7 +4,7 @@ import './Refill.scss';
 const Refill = () => {
     return (
         <div>
-            Refill
+            refill
         </div>
     )
 }
