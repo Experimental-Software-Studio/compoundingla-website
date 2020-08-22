@@ -1,0 +1,29 @@
+.page-header--wrapper{
+    background: linear-gradient(180deg, #FFFFFF00 60%, var(--text-header--highlight) 50%);
+    padding-bottom: 10px;
+    & img{
+        box-sizing: border-box;
+        padding: 0px 10vw;
+        height: 70vh;
+        object-fit: cover;
+        width: 100%;
+    }
+    & h1{
+        text-align: center;
+        font-size: 4rem;
+        color: var(--text-header);
+    }
+    @media screen and (max-width: 800px){
+        background: linear-gradient(180deg, #FFFFFF00 45%, var(--text-header--highlight) 55%);
+        & img{
+            padding: 0px 20px;
+            height: auto;
+            width: 100%;
+        }
+        & h1{
+            text-align: center;
+            font-size: 1.6rem;
+            color: var(--text-header);
+        }
+    }
+}

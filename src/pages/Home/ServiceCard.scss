@@ -1,7 +1,7 @@
 .service-card--wrapper{
     display: grid;
     place-content: center;
-    // background: linear-gradient(180deg, #FFFFFF00 35%, var(--bg-secondary) 0%);
+    background: linear-gradient(0deg, #FFFFFF00 65%, var(--bg-secondary) 0%);
     max-width: 500px;
     & .content{
         text-align: center;
@@ -29,6 +29,34 @@
             background-color: var(--bg-secondary);
             padding: 5px 10px;
             text-decoration: none;
+        }
+    }
+    @media screen and (max-width: 800px){
+        color: var(--text-accent);
+        & .content{
+            text-align: center;
+            max-width: 350px;
+            margin: 10px 0px 50px;
+            & img{
+                width: calc(100vw - 60px); 
+                height: 30vh;
+                object-fit: cover;
+            }
+            & h3{
+                color: var(--text-secondary);
+                height: 40px;
+            }
+            & p{
+                margin: 10px auto;
+                height: 100px;
+                width: 80%; 
+                color: var(--text-accent);
+            }
+            & a{
+                border: 2px solid var(--text-accent);
+                color: var(--text-accent);
+                background-color: var(--text-secondary);
+            }
         }
     }
 }

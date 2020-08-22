@@ -1,0 +1,14 @@
+.horizontal-banner{
+    background-color: #aca5d933;
+    border-top: 3px solid var(--text-accent);
+    border-bottom: 3px solid var(--text-accent);
+    & h2{
+        color: var(--text-header);
+        text-align: center;
+        font-size: 4rem;
+        @media screen and (max-width: 800px) {
+            font-size: 2rem;
+        }
+    }
+
+}
