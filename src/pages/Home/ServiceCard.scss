@@ -1,7 +1,6 @@
 .service-card--wrapper{
     display: grid;
     place-content: center;
-    background: linear-gradient(0deg, #FFFFFF00 65%, var(--bg-secondary) 0%);
     max-width: 500px;
     & .content{
         text-align: center;
@@ -32,6 +31,7 @@
         }
     }
     @media screen and (max-width: 800px){
+        background: linear-gradient(0deg, #FFFFFF00 65%, var(--bg-secondary) 0%);
         color: var(--text-accent);
         & .content{
             text-align: center;

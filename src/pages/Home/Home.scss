@@ -1,6 +1,78 @@
 .home--wrapper{
     & #hero{
-        background-color: var(--bg-secondary);
+        & img{
+            width: 100%;
+            height: calc(100vh - 150px);
+            object-fit: cover;
+        }
+        & .dots-holder{
+            position: absolute;
+            bottom: 8px;
+            & button, button:hover, button:focus, button:active{
+                background-color: transparent;
+                &.BrainhubCarousel__dot--selected{
+                    &:before{
+                        background: var(--text-accent) !important;
+                    }
+                }
+                &:before{
+                    height: 10px;
+                    width: 10px;
+                    background: var(--text-secondary);
+                }
+            }            
+            right: 20px;
+        }
+        & .list{
+            position: absolute;
+            bottom: 8px;
+            left: 80px;
+            & .title{
+                font-size: 3rem;
+                background-color: var(--bg-primary);
+                padding: 15px 40px;
+                font-weight: bold;
+                color: var(--text-accent);
+            }
+            & .description{
+                font-size: 2.5rem;
+                background-color: var(--bg-secondary);
+                padding: 15px 40px;
+                font-weight: bold;
+                color: var(--text-secondary);
+                & svg{
+                    transform: translateY(5px);
+                }
+            }
+        }
+        @media screen and (max-width: 800px){
+            & img{
+                height: 30vh;
+            }
+            & .list{
+                position: static;
+                & .title{
+                    font-size: 1.5rem;
+                    background-color: var(--text-accent);
+                    padding: 10px 30px;
+                    color: var(--text-secondary);
+                }
+                & .description{
+                    font-size: 1rem;
+                    background-color: var(--bg-primary);
+                    padding: 15px 40px;
+                    color: var(--text-accent);
+                    & svg{
+                        height: 20px;
+                        width: 20px;
+                        transform: translateY(5px);
+                        path{
+                            fill: var(--text-accent);
+                        }
+                    }
+                }
+            }
+        }
     }
     & #services{
         display: grid;
@@ -24,7 +96,7 @@
             
         }
         @media screen and (max-width: 800px){
-            padding-top: 100px;
+            padding-top: 150px;
             & .list{
                 padding-bottom: 20px;
                 grid-template-columns: 1fr;
@@ -40,7 +112,7 @@
     }
     & #testimonials{
         display: grid;
-        padding-top: 100px;
+        padding-top: 150px;
         place-content: center;
         & img{
             width: 60vw;
@@ -70,7 +142,7 @@
             margin: 0 auto;
         }
         @media screen and (max-width: 800px){
-            padding: 20px 0px;
+            padding: 150px 0px 0px;
             img{
                 width: calc(100vw - 60px);
                 height: 35vh;
@@ -85,7 +157,7 @@
         }
     }
     & #contact-us{
-        padding: 40px;
+        padding: 150px 40px 60px;
         display: grid;
         grid-template-columns: 1fr 2fr;
         margin: 0 auto;

@@ -35,8 +35,8 @@ const Refill = () => {
             <form>
                 <input id="fname" placeholder="First Name" onChange={handleChange(setFname)} type='text'/>
                 <input id="lname" placeholder="Last Name" onChange={handleChange(setLname)} type='text'/>
-                <input id="email" placeholder="Email Address" onChange={handleChange(setEmail)} type='text'/>
-                <input id="phone" placeholder="Telephone Number" onChange={handleChange(setPhone)} type='text'/>
+                <input id="email" placeholder="Email Address" onChange={handleChange(setEmail)} type='email'/>
+                <input id="phone" placeholder="Telephone Number" onChange={handleChange(setPhone)} type='tel'/>
                 <input id="prescription" placeholder="Prescription #" onChange={handleChange(setPrescription)} type='text'/>
                 <button onClick={submit}>SUBMIT</button>
             </form>

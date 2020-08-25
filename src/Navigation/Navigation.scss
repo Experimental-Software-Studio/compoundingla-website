@@ -1,5 +1,17 @@
+.navigation-mobile--icon{
+    z-index: 1001;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    display: none;
+    @media screen and (max-width: 800px){
+        display: block;
+    }
+}
 .navigation--wrapper{
     position: sticky;
+    z-index: 1000;
     top: 0px;
     height: 100px;
     padding: 20px 40px;
@@ -7,6 +19,7 @@
     grid-template-columns: 310px 1fr repeat(5, auto);
     column-gap: 40px;
     background-color: var(--bg-primary);
+    border-bottom: 2px solid var(--text-accent);
     & img{
         height: 100%;
     }
@@ -15,11 +28,13 @@
         place-items: center;
         border: none;
         background-color: transparent;
+        text-transform: uppercase;
         a.btn{
             color: var(--text-secondary);
             background-color: var(--bg-secondary);
             padding: 10px 20px;
             border-radius: 10px;
+            text-transform: uppercase;
         }
     }
     & a{
@@ -28,20 +43,38 @@
         color: var(--text-primary);
         text-decoration: none;
         font-size: 1.2rem;
+        text-transform: uppercase;
         &:focus{
             outline: 0;
             text-decoration: underline;
         }
     }
     @media screen and (max-width: 800px) {
+        height: 150px;
+        padding: 0px;
         grid-template-columns: 100%;
-        grid-template-rows: 150px repeat(5, 0px);
+        grid-template-rows: 150px repeat(6, 0px);
+        &.open{
+            grid-template-rows: 150px 0px repeat(5, 70px);
+        }
         & img{
+            box-sizing: border-box;
             height: auto;
             width: 100%;
+            padding: 20px 40px;
+            object-fit: contain;
         }
         & a, button{
             overflow: hidden;
+            & a.btn{
+                background-color: transparent;
+                border: none;
+                text-transform: capitalize;
+            }
+            text-transform: capitalize;
+            color: var(--text-secondary);
+            border-bottom: 1px solid white;
+            background-color: var(--text-accent);
         }
     }
 }

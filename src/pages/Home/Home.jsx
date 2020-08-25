@@ -1,14 +1,40 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import ServiceCard from './ServiceCard';
 import services from '../../assets/services';
 import TestimonialImage from '../../assets/testimonial.jpg';
-import AboutUsImage from '../../assets/about-us.jpg';
+import AboutUsImage from '../../assets/about-us-min.jpg';
+import Hero1 from '../../assets/hero-1.jpg';
+import Hero2 from '../../assets/hero-2.jpg';
+import Carousel, {Dots} from '@brainhubeu/react-carousel';
+import {ReactComponent as CheckIcon} from './check.svg';
+import '@brainhubeu/react-carousel/lib/style.css';
 import './Home.scss';
 
+const data = [Hero1, Hero2];
+const number = data.length;
+
 const Home = () => {
+    const [value, setValue] = useState(0);
+
+    useEffect(() => {
+        console.log(value);
+    }, [value])
     return (
         <div className="home--wrapper">
-            <div id="hero" className="section">
+            <div id="hero">
+                <Carousel 
+                    slides={data.map((e, i) => <img key={i} src={e} alt=' '/>)}
+                    value={value}
+                    onChange={setValue} 
+                    animationSpeed={250}
+                />
+                <div className="dots-holder">
+                    <Dots value={value} number={number} onChange={setValue}></Dots>
+                </div>
+                <div className="list">
+                    <div className="title">WHY CHOOSE US?</div>
+                    <div className="description"> <CheckIcon /> Personalized Compounding Service </div>
+                </div>
             </div>
             <div id="services" >
                 <h2 className="highlight">SERVICES</h2>

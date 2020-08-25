@@ -1,2 +1,26 @@
 .immunization--wrapper{
+    & h3{
+        color: var(--text-header);
+    }
+    & .videos{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 40px;
+        width: 60vw;
+        margin: 0 auto;
+        padding-bottom: 80px;
+        & .section{
+            width: 100%;
+            & h3{
+                text-align: center;
+            }
+            & iframe{
+                height: 16vw;
+                width: 100%;
+            }
+        }
+        @media screen and (max-width: 800px) {
+            display: none;
+        }
+    }
 }

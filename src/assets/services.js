@@ -1,6 +1,6 @@
-import CompoundingImage from './compounding.jpg';
+import CompoundingImage from './compounding-min.jpg';
 import ImmunizationImage from './immunization.jpg';
-import ConsultationImage from './consultation.jpg';
+import ConsultationImage from './consultation-min.jpg';
 import TestingImage from './testing.jpg';
 
 let services = [

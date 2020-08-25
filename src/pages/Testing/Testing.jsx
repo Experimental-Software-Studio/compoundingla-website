@@ -1,10 +1,11 @@
 import React, {useState} from 'react';
+import validator from 'validator';
+import HorizontalBanner from '../../components/HorizontalBanner/HorizontalBanner';
 import PageHeader from '../../components/PageHeader';
 import BasicCard from '../../components/BasicCard';
+import TestingImageHeader from '../../assets/testing-header.jpg';
 import TestingImage from '../../assets/testing.jpg';
-import validator from 'validator';
 import './Testing.scss';
-import HorizontalBanner from '../../components/HorizontalBanner/HorizontalBanner';
 
 const Testing = () => {
     const [fname, setFname] = useState('');
@@ -30,7 +31,7 @@ const Testing = () => {
 
     return (
         <div className="testing--wrapper">
-            <PageHeader pageTitle='PHARMACOGENETIC TESTING AND CONSULTATION' pageImage={TestingImage}/>
+            <PageHeader pageTitle='PHARMACOGENETIC TESTING AND CONSULTATION' pageImage={TestingImageHeader}/>
             <p className="description">
                 We provide on-site Point-of-Care testing for:             
             </p>
@@ -52,7 +53,7 @@ const Testing = () => {
             <form>
                 <input id="fname" placeholder="First Name" onChange={handleChange(setFname)} type='text'/>
                 <input id="lname" placeholder="Last Name" onChange={handleChange(setLname)} type='text'/>
-                <input id="email" placeholder="Email Address" onChange={handleChange(setEmail)} type='text'/>
+                <input id="email" placeholder="Email Address" onChange={handleChange(setEmail)} type='email'/>
 
                 <p className="description">Test Type:</p>
 
