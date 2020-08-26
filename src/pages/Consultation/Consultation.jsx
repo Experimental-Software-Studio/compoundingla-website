@@ -28,11 +28,11 @@ const Consultation = () => {
             <div className="videos">
                 <div className="section">
                     <h3>What is Pharmacogenomic Testing?</h3>
-                    <iframe src="https://www.youtube.com/embed/WSf6vyP11aQ" frameborder="0" allow="encrypted-media; picture-in-picture" allowfullscreen></iframe>
+                    <iframe title="https://www.youtube.com/embed/WSf6vyP11aQ" src="https://www.youtube.com/embed/WSf6vyP11aQ" frameborder="0" allow="encrypted-media; picture-in-picture" allowfullscreen></iframe>
                 </div>
                 <div className="section">
                     <h3>Pharmacogenomic Testing for Mental Health</h3>
-                    <iframe src="https://www.youtube.com/embed/cqN1QwRpXMU" frameborder="0" allow="encrypted-media; picture-in-picture" allowfullscreen></iframe>
+                    <iframe title="https://www.youtube.com/embed/cqN1QwRpXMU" src="https://www.youtube.com/embed/cqN1QwRpXMU" frameborder="0" allow="encrypted-media; picture-in-picture" allowfullscreen></iframe>
                 </div>
             </div>
         </div>

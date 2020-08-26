@@ -5,7 +5,8 @@
 	--text-secondary: #ffffff;
 	--text-header: #606060;
 	--text-accent: #ACA5D9;
-	--text-header--highlight: #aca5d933;
+    --text-header--highlight: #aca5d933;
+    line-height: 1.5;
 }
 
 .highlight {
@@ -38,6 +39,7 @@ form{
         }
     }
     & button{
+        cursor: pointer;
         background-color: var(--text-accent);
         color: var(--text-secondary);
         border-radius: 10px;

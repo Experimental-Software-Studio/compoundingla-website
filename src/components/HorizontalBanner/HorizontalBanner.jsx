@@ -1,10 +1,11 @@
 import React from 'react';
 import './HorizontalBanner.scss';
 
-const HorizontalBanner = ({title='CONTACT FORM'}) => {
+const HorizontalBanner = ({title, children}) => {
     return (
         <div className="horizontal-banner">
-            <h2>{title}</h2>
+            {title !== undefined && <h2>{title}</h2>}
+            {children}
         </div>
     )
 }

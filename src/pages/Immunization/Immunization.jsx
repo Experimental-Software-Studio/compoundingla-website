@@ -26,15 +26,15 @@ const Immunization = () => {
             <div className="videos">
                 <div className="section">
                     <h3>Shingles Vaccine</h3>
-                    <iframe src="https://www.youtube.com/embed/YqEv7ZoE6uw" frameborder="0" allow="encrypted-media; picture-in-picture" allowfullscreen></iframe>
+                    <iframe title="https://www.youtube.com/embed/YqEv7ZoE6uw" src="https://www.youtube.com/embed/YqEv7ZoE6uw" frameborder="0" allow="encrypted-media; picture-in-picture" allowfullscreen></iframe>
                 </div>
                 <div className="section">
                     <h3>Flu Vaccine</h3>
-                    <iframe src="https://www.youtube.com/embed/YNd6Hvgitwo" frameborder="0" allow="encrypted-media; picture-in-picture" allowfullscreen></iframe>
+                    <iframe title="https://www.youtube.com/embed/YNd6Hvgitwo" src="https://www.youtube.com/embed/YNd6Hvgitwo" frameborder="0" allow="encrypted-media; picture-in-picture" allowfullscreen></iframe>
                 </div>
                 <div className="section">
                     <h3>Pneumonia Vaccine</h3>
-                    <iframe src="https://www.youtube.com/embed/SVX9kBOI3Pg" frameborder="0" allow="encrypted-media; picture-in-picture" allowfullscreen></iframe>
+                    <iframe title="https://www.youtube.com/embed/SVX9kBOI3Pg" src="https://www.youtube.com/embed/SVX9kBOI3Pg" frameborder="0" allow="encrypted-media; picture-in-picture" allowfullscreen></iframe>
                 </div>
             </div>
         </div>

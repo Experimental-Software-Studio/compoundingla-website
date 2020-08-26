@@ -26,7 +26,7 @@ const Refill = () => {
             phone: phone,
             prescription: prescription
         };
-        console.log(data);
+        console.log("Submitting form...", data);
     }
     return (
         <div className="refill--wrapper">

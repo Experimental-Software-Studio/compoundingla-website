@@ -4,36 +4,51 @@ import services from '../../assets/services';
 import TestimonialImage from '../../assets/testimonial.jpg';
 import AboutUsImage from '../../assets/about-us-min.jpg';
 import Hero1 from '../../assets/hero-1.jpg';
-import Hero2 from '../../assets/hero-2.jpg';
+import Hero2 from '../../assets/testimonial.jpg';
+import Hero3 from '../../assets/consultation-min.jpg';
+import Hero4 from '../../assets/hero-2.jpg';
+import Hero5 from '../../assets/compounding-2.jpg';
+import Hero6 from '../../assets/refill-min.jpg';
+
 import Carousel, {Dots} from '@brainhubeu/react-carousel';
+import HorizontalBanner from '../../components/HorizontalBanner';
 import {ReactComponent as CheckIcon} from './check.svg';
+import TESTIMONIALS from '../../assets/testimonials.json';
 import '@brainhubeu/react-carousel/lib/style.css';
 import './Home.scss';
 
-const data = [Hero1, Hero2];
-const number = data.length;
+const heroImages = [Hero1, Hero2, Hero3, Hero4, Hero5, Hero6];
+const heroDescriptions = ['Personalized Compounding Service', 'Family-owned and operated', 'No long lines', 'Great service', 'Friendly Staff', 'Free delivery/shipping'];
+const number = heroImages.length;
 
 const Home = () => {
-    const [value, setValue] = useState(0);
-
+    const [heroValue, setHeroValue] = useState(0);
+    const [testimonialValue, setTestimonialValue] = useState(0);
     useEffect(() => {
-        console.log(value);
-    }, [value])
+        let incrementable = 0;
+        let slideshow = setInterval(() => {
+            incrementable = (++incrementable) % number;
+            setHeroValue(incrementable);
+        }, 8000);
+        return () => {
+            clearInterval(slideshow);
+        }
+    }, []);
     return (
         <div className="home--wrapper">
             <div id="hero">
                 <Carousel 
-                    slides={data.map((e, i) => <img key={i} src={e} alt=' '/>)}
-                    value={value}
-                    onChange={setValue} 
+                    slides={heroImages.map((e, index) => <img key={index} src={e} alt=' '/>)}
+                    value={heroValue}
+                    onChange={setHeroValue} 
                     animationSpeed={250}
                 />
                 <div className="dots-holder">
-                    <Dots value={value} number={number} onChange={setValue}></Dots>
+                    <Dots value={heroValue} number={number} onChange={setHeroValue}></Dots>
                 </div>
                 <div className="list">
                     <div className="title">WHY CHOOSE US?</div>
-                    <div className="description"> <CheckIcon /> Personalized Compounding Service </div>
+                    <div className="description"><CheckIcon /> {heroDescriptions[heroValue]}</div>
                 </div>
             </div>
             <div id="services" >
@@ -47,7 +62,22 @@ const Home = () => {
             </div>
             <div id="testimonials">
                 <h2 className="highlight">TESTIMONIALS</h2>
-
+                <HorizontalBanner>
+                    <Carousel 
+                        slides={TESTIMONIALS.map((e, index) => (
+                            <div className="quote">
+                                <h4>“{e.testimonial}”</h4>
+                                <p>- {e.name}</p>
+                            </div>
+                        ))}
+                        value={testimonialValue}
+                        onChange={setTestimonialValue} 
+                        animationSpeed={250}
+                    />
+                    <div className="dots-holder">
+                        <Dots value={testimonialValue} number={TESTIMONIALS.length} onChange={setTestimonialValue}></Dots>
+                    </div>
+                </HorizontalBanner>
                 <img src={TestimonialImage} alt="testimonials"/>
             </div>
             <div id="about-us">

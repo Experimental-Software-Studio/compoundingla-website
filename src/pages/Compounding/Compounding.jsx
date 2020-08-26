@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useRef} from 'react';
 import './Compounding.scss';
 import CompoundingImageHeader from '../../assets/compounding-header.jpg';
 import CompoundingImage from '../../assets/compounding-min.jpg';
@@ -15,6 +15,8 @@ const Compounding = () => {
     const [email, setEmail] = useState('');
     const [phone, setPhone] = useState('');
     const [prescription, setPrescription] = useState('');
+    const [files, setFiles] = useState([]);
+    const fileField = React.useRef();
 
     const handleChange = setInput => e => {
         e.preventDefault();
@@ -29,13 +31,14 @@ const Compounding = () => {
             lname: lname,
             email: email,
             phone: phone,
-            prescription: prescription
+            prescription: prescription,
+            files: files
         };
-        console.log(data);
+        console.log("Submitting form...", data);
     }
+
     const upload = (e) => {
-        e.preventDefault();
-        console.log('data');
+        setFiles(Array.from(e.target.files));
     }
 
     return (
@@ -73,7 +76,7 @@ const Compounding = () => {
                     Using our expertise in formulation development, we assist clients/patients develop a customized compound/product to be brought to the market.
                 </p>
             </BasicCard>
-            <HorizontalBanner />
+            <HorizontalBanner title='Contact Form'/>
             <p className="description centered">All fields are required.</p>
             <form>
                 <input id="fname" placeholder="First Name" onChange={handleChange(setFname)} type='text'/>
@@ -85,7 +88,10 @@ const Compounding = () => {
 
                 <input id="prescription" placeholder="Prescription" onChange={handleChange(setPrescription)} type='text'/>
 
-                <button className="upload" onClick={upload}>UPLOAD FILE</button>
+                <label htmlFor="prescription-file" className="upload">
+                    UPLOAD FILE
+                </label>
+                <input onChange={upload} ref={fileField} type="file" id="prescription-file" accept="image/png, image/jpeg" />
                 <button onClick={submit}>SUBMIT</button>
             </form>
         </div>

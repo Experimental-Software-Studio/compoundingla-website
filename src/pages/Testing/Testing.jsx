@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import validator from 'validator';
 import HorizontalBanner from '../../components/HorizontalBanner/HorizontalBanner';
 import PageHeader from '../../components/PageHeader';
@@ -15,8 +15,11 @@ const Testing = () => {
 
     const handleChange = setInput => e => {
         e.preventDefault();
-        if(e.target.value.length >= 150) return;
+        if(e.target.value.length >= 200) return;
         setInput(e.target.value);
+    }
+    const onTestSelect = (e) => {
+        setTestType(Number(e.target.value));
     }
     const submit = (e) => {
         e.preventDefault();
@@ -24,9 +27,10 @@ const Testing = () => {
         let data = {
             fname: fname,
             lname: lname,
-            email: email
+            email: email,
+            type: testType === 1 ? "Covid-19 virus detection (PCR)" : "Covid-19 antibody detection"
         };
-        console.log(data);
+        console.log("Submitting form...", data);
     }
 
     return (
@@ -47,7 +51,7 @@ const Testing = () => {
                 </p>
             </BasicCard>
 
-            <HorizontalBanner />
+            <HorizontalBanner title='Contact Form'/>
 
             <p className="description">All fields are required.</p>
             <form>
@@ -55,8 +59,17 @@ const Testing = () => {
                 <input id="lname" placeholder="Last Name" onChange={handleChange(setLname)} type='text'/>
                 <input id="email" placeholder="Email Address" onChange={handleChange(setEmail)} type='email'/>
 
-                <p className="description">Test Type:</p>
-
+                <p className="description test">Test Type:</p>
+                <div className="radio-holder">
+                    <label>
+                        <input type="radio" value={1} checked={testType === 1} onChange={onTestSelect} />
+                        Covid-19 virus detection (PCR)
+                    </label>
+                    <label>
+                        <input type="radio" value={2} checked={testType === 2} onChange={onTestSelect} />
+                        Covid-19 antibody detection 
+                    </label>
+                </div>
                 <button onClick={submit}>SUBMIT</button>
             </form>
         </div>

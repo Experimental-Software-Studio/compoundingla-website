@@ -1,5 +1,21 @@
 .compounding--wrapper{
-    & button.upload{
+    & label.upload{
         background-color: #A4A4A4;
+        display: inline-block;
+        cursor: pointer;
+        color: var(--text-secondary);
+        border-radius: 10px;
+        font-size: 1.5rem;
+        margin: 20px auto;
+        font-weight: bold;
+        padding: 10px 20px;
+        border: none;
+        @media screen and (max-width: 800px) {
+            font-size: 1rem;
+            margin: 10px auto;
+        }
+    }
+    & input[type="file"] {
+        display: none;
     }
 }

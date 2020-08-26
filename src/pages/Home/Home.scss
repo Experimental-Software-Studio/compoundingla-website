@@ -47,7 +47,10 @@
         }
         @media screen and (max-width: 800px){
             & img{
-                height: 30vh;
+                height: 50vh;
+            }
+            & .dots-holder{
+                bottom: calc(50vh - 150px);
             }
             & .list{
                 position: static;
@@ -77,6 +80,9 @@
     & #services{
         display: grid;
         padding-top: 100px;
+        & h2{
+            margin-bottom: 50px;
+        }
         & .list{
             display: grid;
             padding-bottom: 80px;
@@ -113,14 +119,41 @@
     & #testimonials{
         display: grid;
         padding-top: 150px;
-        place-content: center;
+        & h2{
+            margin-bottom: 50px;
+        }
         & img{
             width: 60vw;
+            place-self: center;
+            margin-top: 80px;
+        }
+        & .quote{
+            text-align: center;
+            max-width: 1000px;
+            h4{
+                font-weight: 400;
+                font-size: 1.8rem;
+                margin: 30px 0px 0px;
+            }
+        }
+        & .dots-holder{
+            display: none;
         }
         @media screen and (max-width: 800px){
             & img{
                 width: calc(100vw - 40px);
-                margin: 0 auto;
+                margin: 80px auto 0px;
+            }
+            & .dots-holder{
+                display: block;
+            }
+            & .quote{
+                box-sizing: border-box;
+                padding: 0px 20px;
+                h4{
+                    font-size: 1.2rem;
+                    padding: none;
+                }
             }
         }
     }
