@@ -4,6 +4,7 @@ const submit = (type, data) => {
         case 'compounding':
             template = `name: ${data.fname} ${data.lname}%0D%0Acontact email: ${data.email}%0D%0Aphone number: ${data.phone}%0D%0Aprescription: ${data.prescription} `;
             url = `mailto:order@compoundingla.com?subject=contact&body=${template}`;
+            console.log(data.files);
             break;
         case 'refill':
             template = `name: ${data.fname} ${data.lname}%0D%0Acontact email: ${data.email}%0D%0Aphone number: ${data.phone}%0D%0Aprescription number: ${data.prescription} `;

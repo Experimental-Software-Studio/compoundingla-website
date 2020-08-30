@@ -22,11 +22,11 @@ const App = ({history}) => {
 		<Fragment>
 			<Navigation />
 			<Switch>
-				<Route path='/refill' component={Refill} />
-				<Route path='/compounding' component={Compounding} />
-				<Route path='/immunization' component={Immunization} />
-				<Route path='/consultation' component={Consultation} />
-				<Route path='/testing' component={Testing} />
+				<Route path={process.env.PUBLIC_URL + '/refill'} component={Refill} />
+				<Route path={process.env.PUBLIC_URL + '/compounding'} component={Compounding} />
+				<Route path={process.env.PUBLIC_URL + '/immunization'} component={Immunization} />
+				<Route path={process.env.PUBLIC_URL + '/consultation'} component={Consultation} />
+				<Route path={process.env.PUBLIC_URL + '/testing'} component={Testing} />
 				<Route component={Home} />
 			</Switch>
 			<Footer />

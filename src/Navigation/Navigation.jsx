@@ -20,7 +20,7 @@ const Navigation = () => {
                 <HashLink onClick={toggleMenu} smooth to='/#about-us'>about</HashLink>
                 <HashLink onClick={toggleMenu} smooth to='/#contact-us'>contact</HashLink>
                 <button onClick={toggleMenu}>
-                    <Link className="btn" to='/refill'>refill</Link>
+                    <Link className="btn" to={process.env.PUBLIC_URL + '/refill'}>refill</Link>
                 </button>
             </div>
             <div className="navigation-mobile--icon" onClick={toggleMenu}><HamburgerIcon /></div>

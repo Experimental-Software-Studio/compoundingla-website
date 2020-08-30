@@ -9,7 +9,7 @@ const ServiceCard = ({title, image, description, path}) => {
                 <h3>{title}</h3>
                 <img src={image} alt={title + ' banner'} />
                 <p>{description}</p>
-                <Link to={path}>LEARN MORE</Link>
+                <Link to={process.env.PUBLIC_URL + path}>LEARN MORE</Link>
             </div>
         </div>
     )
