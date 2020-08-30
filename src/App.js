@@ -1,5 +1,5 @@
-import React from 'react';
-import {BrowserRouter, Switch, Route} from 'react-router-dom';
+import React, {useEffect, Fragment} from 'react';
+import {Switch, Route, withRouter} from 'react-router-dom';
 import Home from './pages/Home';
 import Refill from './pages/Refill';
 import Compounding from './pages/Compounding';
@@ -7,12 +7,19 @@ import Consultation from './pages/Consultation';
 import Testing from './pages/Testing';
 import Navigation from './Navigation';
 import Footer from './Footer';
-import './App.css';
 import Immunization from './pages/Immunization/Immunization';
 
-const App = () => {
+const App = ({history}) => {
+	useEffect(() => {
+		const unlisten = history.listen(() => {
+			window.scrollTo(0,0);
+		})
+		return () => {
+			unlisten();
+		}
+	}, [history])
 	return (
-		<BrowserRouter>
+		<Fragment>
 			<Navigation />
 			<Switch>
 				<Route path='/refill' component={Refill} />
@@ -23,8 +30,8 @@ const App = () => {
 				<Route component={Home} />
 			</Switch>
 			<Footer />
-		</BrowserRouter>
+		</Fragment>
 	);
 }
 
-export default App;
+export default withRouter(App);

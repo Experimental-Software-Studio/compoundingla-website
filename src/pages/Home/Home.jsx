@@ -25,15 +25,13 @@ const Home = () => {
     const [heroValue, setHeroValue] = useState(0);
     const [testimonialValue, setTestimonialValue] = useState(0);
     useEffect(() => {
-        let incrementable = 0;
         let slideshow = setInterval(() => {
-            incrementable = (++incrementable) % number;
-            setHeroValue(incrementable);
+            setHeroValue((heroValue + 1) % number);
         }, 8000);
         return () => {
             clearInterval(slideshow);
         }
-    }, []);
+    }, [heroValue]);
     return (
         <div className="home--wrapper">
             <div id="hero">

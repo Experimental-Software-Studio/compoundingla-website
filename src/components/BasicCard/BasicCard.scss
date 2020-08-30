@@ -11,12 +11,14 @@
     }
     & img{
         margin: 50px 0px;
-        width: 100%;
+        // width: 100%;
+        width: calc(100vw - 80px);
+
     }
     & p{
         font-size: 1.6rem;
     }
-    @media screen and (max-width: 800px) {
+    @media screen and (max-width: 850px) {
         width: calc(100vw - 80px);
         grid-template-columns: 1fr;
         & h2{
@@ -24,6 +26,7 @@
             grid-row: 1/2;
         }
         & img{
+            height: auto;
             margin: 10px 0px;
             // grid-row: 2/3;
         }

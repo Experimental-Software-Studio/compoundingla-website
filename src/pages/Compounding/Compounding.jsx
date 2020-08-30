@@ -4,9 +4,10 @@ import CompoundingImageHeader from '../../assets/compounding-header.jpg';
 import CompoundingImage from '../../assets/compounding-min.jpg';
 import CompoundingImage2 from '../../assets/compounding-2.jpg';
 import CompoundingImage3 from '../../assets/compounding-3.jpg';
-import PageHeader from '../PageHeader';
-import BasicCard from '../BasicCard/BasicCard';
-import HorizontalBanner from '../../components/HorizontalBanner/HorizontalBanner';
+import PageHeader from '../../components/PageHeader';
+import BasicCard from '../../components/BasicCard';
+import HorizontalBanner from '../../components/HorizontalBanner';
+import submitForm from '../../formSubmit';
 import validator from 'validator';
 
 const Compounding = () => {
@@ -16,7 +17,7 @@ const Compounding = () => {
     const [phone, setPhone] = useState('');
     const [prescription, setPrescription] = useState('');
     const [files, setFiles] = useState([]);
-    const fileField = React.useRef();
+    const fileField = useRef();
 
     const handleChange = setInput => e => {
         e.preventDefault();
@@ -34,7 +35,7 @@ const Compounding = () => {
             prescription: prescription,
             files: files
         };
-        console.log("Submitting form...", data);
+        submitForm('compounding', data);
     }
 
     const upload = (e) => {

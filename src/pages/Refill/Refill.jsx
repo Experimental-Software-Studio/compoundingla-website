@@ -1,7 +1,8 @@
 import React, {useState} from 'react';
-import PageHeader from '../PageHeader';
+import PageHeader from '../../components/PageHeader';
 import validator from 'validator';
-import RefillImage from '../../assets/refill.jpg';
+import RefillImage from '../../assets/refill-min.jpg';
+import submitForm from '../../formSubmit';
 import './Refill.scss';
 
 const Refill = () => {
@@ -26,7 +27,7 @@ const Refill = () => {
             phone: phone,
             prescription: prescription
         };
-        console.log("Submitting form...", data);
+        submitForm('refill', data);
     }
     return (
         <div className="refill--wrapper">

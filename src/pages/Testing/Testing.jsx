@@ -1,10 +1,11 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import validator from 'validator';
-import HorizontalBanner from '../../components/HorizontalBanner/HorizontalBanner';
+import HorizontalBanner from '../../components/HorizontalBanner';
 import PageHeader from '../../components/PageHeader';
 import BasicCard from '../../components/BasicCard';
 import TestingImageHeader from '../../assets/testing-header.jpg';
 import TestingImage from '../../assets/testing.jpg';
+import submitForm from '../../formSubmit';
 import './Testing.scss';
 
 const Testing = () => {
@@ -30,7 +31,7 @@ const Testing = () => {
             email: email,
             type: testType === 1 ? "Covid-19 virus detection (PCR)" : "Covid-19 antibody detection"
         };
-        console.log("Submitting form...", data);
+        submitForm('testing', data);
     }
 
     return (

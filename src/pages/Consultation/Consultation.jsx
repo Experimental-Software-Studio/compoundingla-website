@@ -1,10 +1,10 @@
 import React from 'react';
-import BasicCard from '../BasicCard/BasicCard';
+import BasicCard from '../../components/BasicCard';
 import ConsultationImage from '../../assets/consultation.jpg';
 import ConsultationImage1 from '../../assets/consultation-1.png';
 import ConsultationImage2 from '../../assets/consultation-2.jpg';
 import './Consultation.scss';
-import PageHeader from '../PageHeader';
+import PageHeader from '../../components/PageHeader';
 
 const Consultation = () => {
     return (
