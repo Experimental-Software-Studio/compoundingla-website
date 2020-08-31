@@ -1,7 +1,7 @@
 import CompoundingImage from './compounding-min.jpg';
-import ImmunizationImage from './immunization.jpg';
+import ImmunizationImage from './immunization-min.jpg';
 import ConsultationImage from './consultation-min.jpg';
-import TestingImage from './testing.jpg';
+import TestingImage from './testing-min.jpg';
 
 let services = [
     {

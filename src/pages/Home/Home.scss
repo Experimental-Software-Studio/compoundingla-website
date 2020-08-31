@@ -8,7 +8,7 @@
         }
         & .dots-holder{
             position: absolute;
-            bottom: 8px;
+            transform: translateY(-100%);
             & button, button:hover, button:focus, button:active{
                 background-color: transparent;
                 &.BrainhubCarousel__dot--selected{
@@ -26,7 +26,7 @@
         }
         & .list{
             position: absolute;
-            bottom: 8px;
+            transform: translateY(-100%);
             left: 80px;
             & .title{
                 font-size: 3rem;
@@ -50,11 +50,9 @@
             & img{
                 height: 50vh;
             }
-            & .dots-holder{
-                bottom: calc(50vh - 150px);
-            }
             & .list{
                 position: static;
+                transform: none;
                 & .title{
                     font-size: 1.5rem;
                     background-color: var(--text-accent);
@@ -85,9 +83,14 @@
             margin-bottom: 50px;
         }
         & .list{
+            overflow-x: scroll;
+        }
+        & .list-inner{
             display: grid;
             padding-bottom: 80px;
             grid-template-columns: repeat(4, auto);
+            min-width: 1800px;
+            overflow-x: scroll;
             place-content: center;
             background: linear-gradient(180deg, #FFFFFF00 20%, var(--bg-secondary) 0%);
         }
@@ -102,9 +105,13 @@
             }
             
         }
-        @media screen and (max-width: 800px){
+        @media screen and (max-width: 450px){
             padding-top: 150px;
             & .list{
+                overflow-x: hidden;
+            }
+            & .list-inner{
+                min-width: 0px;
                 padding-bottom: 20px;
                 grid-template-columns: 1fr;
                 background: var(--text-secondary);
@@ -136,9 +143,6 @@
                 font-size: 1.8rem;
                 margin: 30px 0px 0px;
             }
-        }
-        & .dots-holder{
-            display: none;
         }
         @media screen and (max-width: 800px){
             & img{

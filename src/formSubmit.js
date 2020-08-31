@@ -1,24 +1,22 @@
-const submit = (type, data) => {
-    let url = '', template;
-    switch(type){
-        case 'compounding':
-            template = `name: ${data.fname} ${data.lname}%0D%0Acontact email: ${data.email}%0D%0Aphone number: ${data.phone}%0D%0Aprescription: ${data.prescription} `;
-            url = `mailto:order@compoundingla.com?subject=contact&body=${template}`;
-            console.log(data.files);
-            break;
-        case 'refill':
-            template = `name: ${data.fname} ${data.lname}%0D%0Acontact email: ${data.email}%0D%0Aphone number: ${data.phone}%0D%0Aprescription number: ${data.prescription} `;
-            url = `mailto:order@compoundingla.com?subject=refill&body=${template}`;
-            console.log(url)
-            break;
-        case 'testing':
-            template = `name: ${data.fname} ${data.lname}%0D%0Acontact email: ${data.email}%0D%0Atest type: ${data.type}`;
-            url = `mailto:order@compoundingla.com?subject=testing&body=${template}`;
-            break;
-        default:
-            break;
-    }
-    window.open(url);
+import Swal from 'sweetalert2';
+
+const submit = (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const data = new FormData(form);
+    const xhr = new XMLHttpRequest();
+    xhr.open(form.method, form.action);
+    xhr.setRequestHeader("Accept", "application/json");
+    xhr.onreadystatechange = () => {
+        if (xhr.readyState !== XMLHttpRequest.DONE) return;
+        if (xhr.status === 200) {
+            form.reset();
+            Swal.fire('Success!', 'We have received your email and will get back to you', 'success');
+        } else {
+            Swal.fire('Error!', 'Something went wrong... You can try again or contact us directly. ', 'error');
+        }
+    };
+    xhr.send(data);
 }
 
 export default submit;

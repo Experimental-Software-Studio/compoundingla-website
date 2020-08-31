@@ -1,8 +1,8 @@
 import React from 'react';
 import BasicCard from '../../components/BasicCard';
-import ConsultationImage from '../../assets/consultation.jpg';
-import ConsultationImage1 from '../../assets/consultation-1.png';
-import ConsultationImage2 from '../../assets/consultation-2.jpg';
+import ConsultationImage from '../../assets/consultation-min';
+import ConsultationImage1 from '../../assets/consultation-1-min.png';
+import ConsultationImage2 from '../../assets/consultation-2-min.jpg';
 import './Consultation.scss';
 import PageHeader from '../../components/PageHeader';
 

@@ -7,7 +7,7 @@
         max-width: 350px;
         & img{
             width: 80%; 
-            height: 12vw;
+            height: 250px;
             object-fit: cover;
         }
         & h3{
@@ -30,7 +30,7 @@
             text-decoration: none;
         }
     }
-    @media screen and (max-width: 800px){
+    @media screen and (max-width: 450px){
         background: linear-gradient(0deg, #FFFFFF00 65%, var(--bg-secondary) 0%);
         color: var(--text-accent);
         & .content{

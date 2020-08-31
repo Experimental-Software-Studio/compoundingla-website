@@ -1,7 +1,7 @@
 import React, {useState, Fragment} from 'react';
 import {Link} from 'react-router-dom';
 import {HashLink} from 'react-router-hash-link';
-import Logo from '../assets/logo.jpg';
+import Logo from '../assets/logo.png';
 import {ReactComponent as HamburgerIcon} from './hamburger.svg';
 import './Navigation.scss';
 

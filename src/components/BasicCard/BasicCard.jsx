@@ -5,7 +5,7 @@ const BasicCard = ({image, title, children}) => {
     return (
         <div className="basic-card--wrapper">
             <div className="info">
-                <h2 className="highlight">{title}</h2>
+                {title.split(' ').map(word => <span className="highlight">{word} </span>)}
                 {children}
             </div>
             <img src={image} alt=" " />

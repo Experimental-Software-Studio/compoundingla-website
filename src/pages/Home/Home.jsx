@@ -1,13 +1,13 @@
 import React, {useState, useEffect} from 'react';
 import ServiceCard from './ServiceCard';
 import services from '../../assets/services';
-import TestimonialImage from '../../assets/testimonial.jpg';
+import TestimonialImage from '../../assets/testimonial-min.jpg';
 import AboutUsImage from '../../assets/about-us-min.jpg';
-import Hero1 from '../../assets/hero-1.jpg';
-import Hero2 from '../../assets/testimonial.jpg';
+import Hero1 from '../../assets/hero-1-min.jpg';
+import Hero2 from '../../assets/testimonial-min.jpg';
 import Hero3 from '../../assets/consultation-min.jpg';
-import Hero4 from '../../assets/hero-2.jpg';
-import Hero5 from '../../assets/compounding-2.jpg';
+import Hero4 from '../../assets/hero-2-min.jpg';
+import Hero5 from '../../assets/compounding-2-min.jpg';
 import Hero6 from '../../assets/refill-min.jpg';
 
 import Carousel, {Dots} from '@brainhubeu/react-carousel';
@@ -52,7 +52,9 @@ const Home = () => {
             <div id="services" >
                 <h2 className="highlight">SERVICES</h2>
                 <div className="list">
+                    <div className="list-inner">
                     {services.map(service => (<ServiceCard key={service.path} {...service}/>))}
+                    </div>
                 </div>
                 <p className="note">
                     In addition to CompoundingLA’s services, since 1964, our retail pharmacy, <span>Portola Pharmacy</span>, has been serving the community and offers prescription services. 

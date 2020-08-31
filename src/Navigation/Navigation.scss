@@ -1,11 +1,11 @@
 .navigation-mobile--icon{
     z-index: 1001;
     position: fixed;
-    top: 20px;
-    right: 20px;
+    top: 10px;
+    right: 15px;
     cursor: pointer;
     display: none;
-    @media screen and (max-width: 800px){
+    @media screen and (max-width: 850px){
         display: block;
     }
 }
@@ -16,8 +16,6 @@
     top: 0px;
     height: 100px;
     width: 100vw;
-    // overflow-x: hidden;
-    // overflow-y: visible;
     padding: 20px 40px;
     display: grid;
     grid-template-columns: 310px 1fr repeat(5, auto);
@@ -62,19 +60,18 @@
         }
     }
     @media screen and (max-width: 850px) {
-        height: 150px;
+        height: 100px;
         padding: 0px;
         grid-template-columns: 100vw;
-        grid-template-rows: 150px repeat(6, 0px);
+        grid-template-rows: 100px repeat(6, 0px);
         &.open{
-            grid-template-rows: 150px 0px repeat(5, 70px);
+            grid-template-rows: 100px 0px repeat(5, 70px);
         }
         & img{
             display: block;
-            width:  100vw;
+            width:  100%;
             box-sizing: border-box;
-            margin: 0 auto;
-            padding: 20px 40px;
+            padding: 10px 30px;
             object-fit: contain;
         }
         & a, button{

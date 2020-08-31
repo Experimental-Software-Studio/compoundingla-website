@@ -1,47 +1,15 @@
-import React, {useState, useRef} from 'react';
+import React from 'react';
 import './Compounding.scss';
 import CompoundingImageHeader from '../../assets/compounding-header.jpg';
 import CompoundingImage from '../../assets/compounding-min.jpg';
-import CompoundingImage2 from '../../assets/compounding-2.jpg';
-import CompoundingImage3 from '../../assets/compounding-3.jpg';
+import CompoundingImage2 from '../../assets/compounding-2-min.jpg';
+import CompoundingImage3 from '../../assets/compounding-3-min.jpg';
 import PageHeader from '../../components/PageHeader';
 import BasicCard from '../../components/BasicCard';
 import HorizontalBanner from '../../components/HorizontalBanner';
 import submitForm from '../../formSubmit';
-import validator from 'validator';
 
 const Compounding = () => {
-    const [fname, setFname] = useState('');
-    const [lname, setLname] = useState('');
-    const [email, setEmail] = useState('');
-    const [phone, setPhone] = useState('');
-    const [prescription, setPrescription] = useState('');
-    const [files, setFiles] = useState([]);
-    const fileField = useRef();
-
-    const handleChange = setInput => e => {
-        e.preventDefault();
-        if(e.target.value.length >= 150) return;
-        setInput(e.target.value);
-    }
-    const submit = (e) => {
-        e.preventDefault();
-        if(!validator.isEmail(email) || !validator.isMobilePhone(phone)) return;
-        let data = {
-            fname: fname,
-            lname: lname,
-            email: email,
-            phone: phone,
-            prescription: prescription,
-            files: files
-        };
-        submitForm('compounding', data);
-    }
-
-    const upload = (e) => {
-        setFiles(Array.from(e.target.files));
-    }
-
     return (
         <div className="compounding--wrapper">
             <PageHeader pageTitle='COMPOUNDING' pageImage={CompoundingImageHeader}/>
@@ -79,21 +47,26 @@ const Compounding = () => {
             </BasicCard>
             <HorizontalBanner title='Contact Form'/>
             <p className="description centered">All fields are required.</p>
-            <form>
-                <input id="fname" placeholder="First Name" onChange={handleChange(setFname)} type='text'/>
-                <input id="lname" placeholder="Last Name" onChange={handleChange(setLname)} type='text'/>
-                <input id="email" placeholder="Email Address" onChange={handleChange(setEmail)} type='email'/>
-                <input id="phone" placeholder="Telephone Number" onChange={handleChange(setPhone)} type='tel'/>
+            <form 
+                onSubmit={submitForm}
+                action="https://formspree.io/xvowjvoz"
+                method="POST"
+                encType="multipart/form-data"
+            >
+                <input id="fname" name="first name" placeholder="First Name" type='text'/>
+                <input id="lname" name="last name" placeholder="Last Name" type='text'/>
+                <input id="email" name="email" placeholder="Email Address" type='email'/>
+                <input id="phone" name="phone number" placeholder="Telephone Number" type='tel'/>
 
                 <p className="centered description">Please type in the prescription name or upload a file.</p>
 
-                <input id="prescription" placeholder="Prescription" onChange={handleChange(setPrescription)} type='text'/>
+                <input id="prescription" name="prescription" placeholder="Prescription" type='text'/>
 
-                <label htmlFor="prescription-file" className="upload">
+                {/* <label htmlFor="prescription-file" className="upload">
                     UPLOAD FILE
                 </label>
-                <input onChange={upload} ref={fileField} type="file" id="prescription-file" accept="image/png, image/jpeg" />
-                <button onClick={submit}>SUBMIT</button>
+                <input onChange={upload} ref={fileField} type="file" name="prescription file" id="prescription-file" accept="image/png, image/jpeg" /> */}
+                <button type="submit">SUBMIT</button>
             </form>
         </div>
     )

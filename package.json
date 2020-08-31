@@ -13,6 +13,7 @@
     "react-router-dom": "^5.2.0",
     "react-router-hash-link": "^2.0.0",
     "react-scripts": "3.4.3",
+    "sweetalert2": "^9.17.1",
     "validator": "^13.1.1"
   },
   "scripts": {

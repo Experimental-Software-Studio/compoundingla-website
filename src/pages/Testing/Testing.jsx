@@ -1,38 +1,13 @@
-import React, {useState} from 'react';
-import validator from 'validator';
+import React from 'react';
 import HorizontalBanner from '../../components/HorizontalBanner';
 import PageHeader from '../../components/PageHeader';
 import BasicCard from '../../components/BasicCard';
-import TestingImageHeader from '../../assets/testing-header.jpg';
-import TestingImage from '../../assets/testing.jpg';
+import TestingImageHeader from '../../assets/testing-header-min.jpg';
+import TestingImage from '../../assets/testing-min.jpg';
 import submitForm from '../../formSubmit';
 import './Testing.scss';
 
 const Testing = () => {
-    const [fname, setFname] = useState('');
-    const [lname, setLname] = useState('');
-    const [email, setEmail] = useState('');
-    const [testType, setTestType] = useState(1);
-
-    const handleChange = setInput => e => {
-        e.preventDefault();
-        if(e.target.value.length >= 200) return;
-        setInput(e.target.value);
-    }
-    const onTestSelect = (e) => {
-        setTestType(Number(e.target.value));
-    }
-    const submit = (e) => {
-        e.preventDefault();
-        if(!validator.isEmail(email)) return;
-        let data = {
-            fname: fname,
-            lname: lname,
-            email: email,
-            type: testType === 1 ? "Covid-19 virus detection (PCR)" : "Covid-19 antibody detection"
-        };
-        submitForm('testing', data);
-    }
 
     return (
         <div className="testing--wrapper">
@@ -55,23 +30,27 @@ const Testing = () => {
             <HorizontalBanner title='Contact Form'/>
 
             <p className="description">All fields are required.</p>
-            <form>
-                <input id="fname" placeholder="First Name" onChange={handleChange(setFname)} type='text'/>
-                <input id="lname" placeholder="Last Name" onChange={handleChange(setLname)} type='text'/>
-                <input id="email" placeholder="Email Address" onChange={handleChange(setEmail)} type='email'/>
+            <form
+                onSubmit={submitForm}
+                action="https://formspree.io/mlepyogz"
+                method="POST"
+            >
+                <input id="fname" name="first name" placeholder="First Name" type='text'/>
+                <input id="lname" name="last name" placeholder="Last Name" type='text'/>
+                <input id="email" name="email" placeholder="Email Address" type='email'/>
 
                 <p className="description test">Test Type:</p>
                 <div className="radio-holder">
                     <label>
-                        <input type="radio" value={1} checked={testType === 1} onChange={onTestSelect} />
+                        <input type="radio" name="test type" value="Covid-19 virus detection (PCR)" defaultChecked/>
                         Covid-19 virus detection (PCR)
                     </label>
                     <label>
-                        <input type="radio" value={2} checked={testType === 2} onChange={onTestSelect} />
+                        <input type="radio" name="test type" value="Covid-19 antibody detection"/>
                         Covid-19 antibody detection 
                     </label>
                 </div>
-                <button onClick={submit}>SUBMIT</button>
+                <button type="submit">SUBMIT</button>
             </form>
         </div>
     )

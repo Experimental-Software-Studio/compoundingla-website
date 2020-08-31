@@ -1,12 +1,12 @@
 import React from 'react';
-import Logo from '../../assets/logo.jpg';
+import Logo from '../../assets/logo.png';
 import './PageHeader.scss';
 
 const PageHeader = ({pageTitle="Compounding LA", pageImage=Logo}) => {
     return (
         <div className="page-header--wrapper">
             <img src={pageImage} alt={pageTitle + ' banner'}/>
-            <h1>{pageTitle}</h1>
+            <h2>{pageTitle}</h2>
         </div>
     )
 }
