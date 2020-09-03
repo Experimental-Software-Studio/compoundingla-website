@@ -1,10 +1,9 @@
 import React, {useState, useEffect} from 'react';
 import ServiceCard from './ServiceCard';
 import services from '../../assets/services';
-import TestimonialImage from '../../assets/testimonial-min.jpg';
+import TestimonialImage from '../../assets/testimonial.jpg';
 import AboutUsImage from '../../assets/about-us-min.jpg';
 import Hero1 from '../../assets/hero-1-min.jpg';
-import Hero2 from '../../assets/testimonial-min.jpg';
 import Hero3 from '../../assets/consultation-min.jpg';
 import Hero4 from '../../assets/hero-2-min.jpg';
 import Hero5 from '../../assets/compounding-2-min.jpg';
@@ -17,7 +16,7 @@ import TESTIMONIALS from '../../assets/testimonials.json';
 import '@brainhubeu/react-carousel/lib/style.css';
 import './Home.scss';
 
-const heroImages = [Hero1, Hero2, Hero3, Hero4, Hero5, Hero6];
+const heroImages = [Hero1, TestimonialImage, Hero3, Hero4, Hero5, Hero6];
 const heroDescriptions = ['Personalized Compounding Service', 'Family-owned and operated', 'No long lines', 'Great service', 'Friendly Staff', 'Free delivery/shipping'];
 const number = heroImages.length;
 

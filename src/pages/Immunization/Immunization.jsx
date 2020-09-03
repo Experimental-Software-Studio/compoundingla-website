@@ -1,6 +1,6 @@
 import React from 'react';
 import './Immunization.scss';
-import ImmunizationImage from '../../assets/immunization-min';
+import ImmunizationImage from '../../assets/immunization.jpg';
 import ImmunizationImage1 from '../../assets/immunization-1-min.jpg';
 import ImmunizationImage2 from '../../assets/immunization-2-min.jpg';
 import PageHeader from '../../components/PageHeader';

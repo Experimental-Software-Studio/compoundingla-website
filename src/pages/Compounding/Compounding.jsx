@@ -58,14 +58,10 @@ const Compounding = () => {
                 <input id="email" name="email" placeholder="Email Address" type='email'/>
                 <input id="phone" name="phone number" placeholder="Telephone Number" type='tel'/>
 
-                <p className="centered description">Please type in the prescription name or upload a file.</p>
+                <p className="centered description">Please type in the prescription name.</p>
 
                 <input id="prescription" name="prescription" placeholder="Prescription" type='text'/>
 
-                {/* <label htmlFor="prescription-file" className="upload">
-                    UPLOAD FILE
-                </label>
-                <input onChange={upload} ref={fileField} type="file" name="prescription file" id="prescription-file" accept="image/png, image/jpeg" /> */}
                 <button type="submit">SUBMIT</button>
             </form>
         </div>

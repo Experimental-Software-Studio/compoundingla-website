@@ -3,7 +3,7 @@ import HorizontalBanner from '../../components/HorizontalBanner';
 import PageHeader from '../../components/PageHeader';
 import BasicCard from '../../components/BasicCard';
 import TestingImageHeader from '../../assets/testing-header-min.jpg';
-import TestingImage from '../../assets/testing-min.jpg';
+import TestingImage from '../../assets/testing.jpg';
 import submitForm from '../../formSubmit';
 import './Testing.scss';
 
