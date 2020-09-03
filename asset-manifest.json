@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/compoundingla-website/static/css/main.8b09f251.chunk.css",
+    "main.css": "/compoundingla-website/static/css/main.f96b92c9.chunk.css",
     "main.js": "/compoundingla-website/static/js/main.1da7e52e.chunk.js",
     "main.js.map": "/compoundingla-website/static/js/main.1da7e52e.chunk.js.map",
     "runtime-main.js": "/compoundingla-website/static/js/runtime-main.41834fd7.js",
@@ -9,10 +9,10 @@
     "static/js/2.e979b647.chunk.js": "/compoundingla-website/static/js/2.e979b647.chunk.js",
     "static/js/2.e979b647.chunk.js.map": "/compoundingla-website/static/js/2.e979b647.chunk.js.map",
     "index.html": "/compoundingla-website/index.html",
-    "precache-manifest.654493ea81beb4c0242131c363ee2783.js": "/compoundingla-website/precache-manifest.654493ea81beb4c0242131c363ee2783.js",
+    "precache-manifest.d1d16da03865573ad2b23a02b07614ef.js": "/compoundingla-website/precache-manifest.d1d16da03865573ad2b23a02b07614ef.js",
     "service-worker.js": "/compoundingla-website/service-worker.js",
     "static/css/2.f4bde6ca.chunk.css.map": "/compoundingla-website/static/css/2.f4bde6ca.chunk.css.map",
-    "static/css/main.8b09f251.chunk.css.map": "/compoundingla-website/static/css/main.8b09f251.chunk.css.map",
+    "static/css/main.f96b92c9.chunk.css.map": "/compoundingla-website/static/css/main.f96b92c9.chunk.css.map",
     "static/js/2.e979b647.chunk.js.LICENSE.txt": "/compoundingla-website/static/js/2.e979b647.chunk.js.LICENSE.txt",
     "static/media/about-us-min.jpg": "/compoundingla-website/static/media/about-us-min.0af009b7.jpg",
     "static/media/check.2cba45ce.svg": "/compoundingla-website/static/media/check.2cba45ce.svg",
@@ -39,7 +39,7 @@
     "static/js/runtime-main.41834fd7.js",
     "static/css/2.f4bde6ca.chunk.css",
     "static/js/2.e979b647.chunk.js",
-    "static/css/main.8b09f251.chunk.css",
+    "static/css/main.f96b92c9.chunk.css",
     "static/js/main.1da7e52e.chunk.js"
   ]
 }

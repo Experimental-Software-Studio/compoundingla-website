@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "55a219407cf3b8134a1c3afde5a8855d",
+    "revision": "b7bc05a5f4670ebf199bd5b7cffeeaf3",
     "url": "/compoundingla-website/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/compoundingla-website/static/css/2.f4bde6ca.chunk.css"
   },
   {
-    "revision": "f4b84f1b0a97fb8ff7d2",
-    "url": "/compoundingla-website/static/css/main.8b09f251.chunk.css"
+    "revision": "2db445bc18a772ac90ea",
+    "url": "/compoundingla-website/static/css/main.f96b92c9.chunk.css"
   },
   {
     "revision": "277e1310fe69f5c523c0",
@@ -20,7 +20,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/compoundingla-website/static/js/2.e979b647.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "f4b84f1b0a97fb8ff7d2",
+    "revision": "2db445bc18a772ac90ea",
     "url": "/compoundingla-website/static/js/main.1da7e52e.chunk.js"
   },
   {
