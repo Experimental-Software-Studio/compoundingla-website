@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/compoundingla-website/static/css/main.aaca8d1c.chunk.css",
-    "main.js": "/compoundingla-website/static/js/main.6b7f0ee7.chunk.js",
-    "main.js.map": "/compoundingla-website/static/js/main.6b7f0ee7.chunk.js.map",
+    "main.css": "/compoundingla-website/static/css/main.8b09f251.chunk.css",
+    "main.js": "/compoundingla-website/static/js/main.1da7e52e.chunk.js",
+    "main.js.map": "/compoundingla-website/static/js/main.1da7e52e.chunk.js.map",
     "runtime-main.js": "/compoundingla-website/static/js/runtime-main.41834fd7.js",
     "runtime-main.js.map": "/compoundingla-website/static/js/runtime-main.41834fd7.js.map",
     "static/css/2.f4bde6ca.chunk.css": "/compoundingla-website/static/css/2.f4bde6ca.chunk.css",
-    "static/js/2.2d373f6f.chunk.js": "/compoundingla-website/static/js/2.2d373f6f.chunk.js",
-    "static/js/2.2d373f6f.chunk.js.map": "/compoundingla-website/static/js/2.2d373f6f.chunk.js.map",
+    "static/js/2.e979b647.chunk.js": "/compoundingla-website/static/js/2.e979b647.chunk.js",
+    "static/js/2.e979b647.chunk.js.map": "/compoundingla-website/static/js/2.e979b647.chunk.js.map",
     "index.html": "/compoundingla-website/index.html",
-    "precache-manifest.d5ec38ad698a1328505f101ce849e699.js": "/compoundingla-website/precache-manifest.d5ec38ad698a1328505f101ce849e699.js",
+    "precache-manifest.654493ea81beb4c0242131c363ee2783.js": "/compoundingla-website/precache-manifest.654493ea81beb4c0242131c363ee2783.js",
     "service-worker.js": "/compoundingla-website/service-worker.js",
     "static/css/2.f4bde6ca.chunk.css.map": "/compoundingla-website/static/css/2.f4bde6ca.chunk.css.map",
-    "static/css/main.aaca8d1c.chunk.css.map": "/compoundingla-website/static/css/main.aaca8d1c.chunk.css.map",
-    "static/js/2.2d373f6f.chunk.js.LICENSE.txt": "/compoundingla-website/static/js/2.2d373f6f.chunk.js.LICENSE.txt",
+    "static/css/main.8b09f251.chunk.css.map": "/compoundingla-website/static/css/main.8b09f251.chunk.css.map",
+    "static/js/2.e979b647.chunk.js.LICENSE.txt": "/compoundingla-website/static/js/2.e979b647.chunk.js.LICENSE.txt",
     "static/media/about-us-min.jpg": "/compoundingla-website/static/media/about-us-min.0af009b7.jpg",
     "static/media/check.2cba45ce.svg": "/compoundingla-website/static/media/check.2cba45ce.svg",
     "static/media/compounding-2-min.jpg": "/compoundingla-website/static/media/compounding-2-min.35ed8f64.jpg",
@@ -38,8 +38,8 @@
   "entrypoints": [
     "static/js/runtime-main.41834fd7.js",
     "static/css/2.f4bde6ca.chunk.css",
-    "static/js/2.2d373f6f.chunk.js",
-    "static/css/main.aaca8d1c.chunk.css",
-    "static/js/main.6b7f0ee7.chunk.js"
+    "static/js/2.e979b647.chunk.js",
+    "static/css/main.8b09f251.chunk.css",
+    "static/js/main.1da7e52e.chunk.js"
   ]
 }
