@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState, Fragment} from 'react';
 import './Compounding.scss';
 import CompoundingImageHeader from '../../assets/compounding-header.jpg';
 import CompoundingImage from '../../assets/compounding-min.jpg';
@@ -10,6 +10,7 @@ import HorizontalBanner from '../../components/HorizontalBanner';
 import submitForm from '../../formSubmit';
 
 const Compounding = () => {
+    const [expanded, setExpanded] = useState(false);
     return (
         <div className="compounding--wrapper">
             <PageHeader pageTitle='COMPOUNDING' pageImage={CompoundingImageHeader}/>
@@ -37,8 +38,35 @@ const Compounding = () => {
                     <br />
                     Atenolol (Cat/Topical)
                     <br />
-                    Expand to see more.
+                    {expanded && (
+                        <Fragment>
+                            Buspirone (Cat/Topical)
+                            <br />
+                            Chloramphenicol Oral Suspension 
+                            <br />
+                            Dexamethasone (Cat/Topical)
+                            <br />
+                            Diethylstilbestrol Capsules
+                            <br />
+                            Fluoxetine (Cat/Topical)
+                            <br />
+                            Glipizide (Cat/Topical)
+                            <br />
+                            Methimazole Oral Liquid 
+                            <br />
+                            Metronidazole Oral Liquid 
+                            <br />
+                            Metronidazole (Cat/Topical)
+                            <br />
+                            Phenobarbital (Cat/Topical)
+                            <br />
+                            Potassium Bromide Capsules & Solution
+                            <br />
+                            ​Prednisone Oral Liquid ​
+                        </Fragment>
+                    )}
                 </p>
+                <button className="expand" onClick={setExpanded.bind(null, !expanded)}>{expanded ? 'See less.' : 'Expand to see more.'}</button>
             </BasicCard>
             <BasicCard title='Customized Compounding Services' image={CompoundingImage3}>
                 <p>
