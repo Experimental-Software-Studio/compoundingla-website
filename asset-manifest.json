@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/compoundingla-website/static/css/main.5acfb47f.chunk.css",
-    "main.js": "/compoundingla-website/static/js/main.13322683.chunk.js",
-    "main.js.map": "/compoundingla-website/static/js/main.13322683.chunk.js.map",
+    "main.css": "/compoundingla-website/static/css/main.aaca8d1c.chunk.css",
+    "main.js": "/compoundingla-website/static/js/main.6b7f0ee7.chunk.js",
+    "main.js.map": "/compoundingla-website/static/js/main.6b7f0ee7.chunk.js.map",
     "runtime-main.js": "/compoundingla-website/static/js/runtime-main.41834fd7.js",
     "runtime-main.js.map": "/compoundingla-website/static/js/runtime-main.41834fd7.js.map",
     "static/css/2.f4bde6ca.chunk.css": "/compoundingla-website/static/css/2.f4bde6ca.chunk.css",
     "static/js/2.2d373f6f.chunk.js": "/compoundingla-website/static/js/2.2d373f6f.chunk.js",
     "static/js/2.2d373f6f.chunk.js.map": "/compoundingla-website/static/js/2.2d373f6f.chunk.js.map",
     "index.html": "/compoundingla-website/index.html",
-    "precache-manifest.78c8638ad27e5b4b1fed974de5b6b3b2.js": "/compoundingla-website/precache-manifest.78c8638ad27e5b4b1fed974de5b6b3b2.js",
+    "precache-manifest.d5ec38ad698a1328505f101ce849e699.js": "/compoundingla-website/precache-manifest.d5ec38ad698a1328505f101ce849e699.js",
     "service-worker.js": "/compoundingla-website/service-worker.js",
     "static/css/2.f4bde6ca.chunk.css.map": "/compoundingla-website/static/css/2.f4bde6ca.chunk.css.map",
-    "static/css/main.5acfb47f.chunk.css.map": "/compoundingla-website/static/css/main.5acfb47f.chunk.css.map",
+    "static/css/main.aaca8d1c.chunk.css.map": "/compoundingla-website/static/css/main.aaca8d1c.chunk.css.map",
     "static/js/2.2d373f6f.chunk.js.LICENSE.txt": "/compoundingla-website/static/js/2.2d373f6f.chunk.js.LICENSE.txt",
     "static/media/about-us-min.jpg": "/compoundingla-website/static/media/about-us-min.0af009b7.jpg",
     "static/media/check.2cba45ce.svg": "/compoundingla-website/static/media/check.2cba45ce.svg",
@@ -39,7 +39,7 @@
     "static/js/runtime-main.41834fd7.js",
     "static/css/2.f4bde6ca.chunk.css",
     "static/js/2.2d373f6f.chunk.js",
-    "static/css/main.5acfb47f.chunk.css",
-    "static/js/main.13322683.chunk.js"
+    "static/css/main.aaca8d1c.chunk.css",
+    "static/js/main.6b7f0ee7.chunk.js"
   ]
 }
