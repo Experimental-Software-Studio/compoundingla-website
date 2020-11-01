@@ -1,59 +1,91 @@
-import React from 'react';
-import HorizontalBanner from '../../components/HorizontalBanner';
-import PageHeader from '../../components/PageHeader';
-import BasicCard from '../../components/BasicCard';
-import TestingImageHeader from '../../assets/testing-header-min.jpg';
-import TestingImage from '../../assets/testing.jpg';
-import submitForm from '../../formSubmit';
-import './Testing.scss';
+import React from "react";
+import HorizontalBanner from "../../components/HorizontalBanner";
+import PageHeader from "../../components/PageHeader";
+import BasicCard from "../../components/BasicCard";
+import TestingImageHeader from "../../assets/testing-header-min.jpg";
+import TestingImage from "../../assets/testing.jpg";
+import submitForm from "../../formSubmit";
+import "./Testing.scss";
 
-const Testing = () => {
+const Testing = () => (
+  <div className="testing--wrapper">
+    <PageHeader
+      pageTitle="RAPID COVID-19 TESTING"
+      pageImage={TestingImageHeader}
+    />
+    <p className="description">
+      Rapid Point-of-Care test
+      <br />
+      Get results in 15-30 min (30 minutes guaranteed)
+    </p>
+    <BasicCard
+      title="Rapid Covid Test Details:"
+      videoLink={
+        "//players.brightcove.net/81909694001/HJs9NIMfe_default/index.html?videoId=6169658484001"
+      }
+    >
+      <ul>
+        <li>
+          Using FDA EUA test by DB Veritor<sup>TM</sup> System
+        </li>
+        <li>Immunoassay for detection of SARS-CoV-2 Antigen in Nasal Swab</li>
+        <li>
+          See video of Video of BD Veritor<sup>TM</sup> System
+        </li>
+      </ul>
+    </BasicCard>
+    <BasicCard
+      title="How does it work?"
+      videoLink={
+        "//players.brightcove.net/81909694001/HJs9NIMfe_default/index.html?videoId=6182246412001"
+      }
+    >
+      <p>
+        <strong>Step 1:</strong> Drive up to parking lot at 3408 N Eastern
+        Avenue, Los Angeles, CA 90032, stay in car, call 323-441-0751
+      </p>
+      <p>
+        <strong>Step 2:</strong> Complete a quick screening over the phone
+      </p>
+      <p>
+        <strong>Step 3:</strong> A team member will help perform the test
+        yourself using a nasal swab. See video for sample collection.
+      </p>
+      <p>
+        <strong>Step 4:</strong> Get results
+      </p>
+    </BasicCard>
 
-    return (
-        <div className="testing--wrapper">
-            <PageHeader pageTitle='PHARMACOGENETIC TESTING AND CONSULTATION' pageImage={TestingImageHeader}/>
-            <p className="description">
-                We provide on-site Point-of-Care testing for:             
-            </p>
-            <BasicCard title='Covid-19 Diagnostic Test' image={TestingImage}>
-                <p>
-                    Rapid POC test for detection of the novel coronavirus, SARS-CoV-2, the causative agent of Covid-19.                 
-                </p>
-            </BasicCard>
-            <BasicCard title='Covid-19 IgG/IgM Antibody Test' image={TestingImage}>
-                <h3>For mental health & psychiatric medications</h3>
-                <p>
-                    Rapid POC test for detection of IgM and IgG antibody against the novel coronavirus, SARS-CoV-2, the causative agent of Covid-19. 
-                </p>
-            </BasicCard>
+    <p className="description">
+      If you would like to schedule an appointment for testing, please fill out
+      the contact form below:
+    </p>
 
-            <HorizontalBanner title='Contact Form'/>
+    <HorizontalBanner title="Contact Form" />
 
-            <p className="description">All fields are required.</p>
-            <form
-                onSubmit={submitForm}
-                action="https://formspree.io/mlepyogz"
-                method="POST"
-            >
-                <input id="fname" name="first name" placeholder="First Name" type='text'/>
-                <input id="lname" name="last name" placeholder="Last Name" type='text'/>
-                <input id="email" name="email" placeholder="Email Address" type='email'/>
-
-                <p className="description test">Test Type:</p>
-                <div className="radio-holder">
-                    <label>
-                        <input type="radio" name="test type" value="Covid-19 virus detection (PCR)" defaultChecked/>
-                        Covid-19 virus detection (PCR)
-                    </label>
-                    <label>
-                        <input type="radio" name="test type" value="Covid-19 antibody detection"/>
-                        Covid-19 antibody detection 
-                    </label>
-                </div>
-                <button type="submit">SUBMIT</button>
-            </form>
-        </div>
-    )
-}
+    <p className="description">All fields are required.</p>
+    <form
+      onSubmit={submitForm}
+      action="https://formspree.io/mlepyogz"
+      method="POST"
+    >
+      <input
+        id="fname"
+        name="first name"
+        placeholder="First Name"
+        type="text"
+      />
+      <input id="lname" name="last name" placeholder="Last Name" type="text" />
+      <input id="email" name="email" placeholder="Email Address" type="email" />
+      <input
+        id="phone"
+        name="phone number"
+        placeholder="Phone Number"
+        type="tel"
+      />
+      <button type="submit">SUBMIT</button>
+    </form>
+  </div>
+);
 
 export default Testing;

@@ -1,74 +1,78 @@
 :root {
-	--bg-primary: #ffffff;
-	--bg-secondary: #ACA5D9;
-	--text-primary: #000000;
-	--text-secondary: #ffffff;
-	--text-header: #606060;
-	--text-accent: #ACA5D9;
-    --text-header--highlight: #aca5d933;
-    line-height: 1.5;
+  --bg-primary: #ffffff;
+  --bg-secondary: #aca5d9;
+  --text-primary: #000000;
+  --text-secondary: #ffffff;
+  --text-header: #606060;
+  --text-accent: #aca5d9;
+  --text-header--highlight: #aca5d933;
+  line-height: 1.5;
 }
 
 .highlight {
-	background: linear-gradient(180deg, #ffffff00 50%, var(--text-header--highlight) 50%);
+  background: linear-gradient(
+    180deg,
+    #ffffff00 50%,
+    var(--text-header--highlight) 50%
+  );
 }
 
 body {
-	background-color: var(--bg-primary);
-	margin: 0;
-	font-family: 'Work Sans', sans-serif;
-	-webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    overflow-x: hidden;
+  background-color: var(--bg-primary);
+  margin: 0;
+  font-family: "Work Sans", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
-form{
-    display: grid;
-    grid-template-columns: 1fr;
-    max-width: 1000px;
-    margin: 0 auto;
-    padding-bottom: 60px;
-    & input{
-        font-size: 1.8rem;
-        margin: 20px;
-        border: none;
-        border-bottom: 4px solid var(--text-accent);
-        background-color: #FAFAFA;
-        padding: 10px 20px;
-        @media screen and (max-width: 800px) {
-            margin: 10px 20px;
-            font-size: 1.4rem;
-        }
+form {
+  display: grid;
+  grid-template-columns: 1fr;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding-bottom: 60px;
+  & input {
+    font-size: 1.8rem;
+    margin: 20px;
+    border: none;
+    border-bottom: 4px solid var(--text-accent);
+    background-color: #fafafa;
+    padding: 10px 20px;
+    @media screen and (max-width: 800px) {
+      margin: 10px 20px;
+      font-size: 1.4rem;
     }
-    & button{
-        cursor: pointer;
-        background-color: var(--text-accent);
-        color: var(--text-secondary);
-        border-radius: 10px;
-        font-size: 1.5rem;
-        margin: 20px auto;
-        font-weight: bold;
-        padding: 10px 20px;
-        border: none;
-        @media screen and (max-width: 800px) {
-            font-size: 1rem;
-            margin: 10px auto;
-        }
+  }
+  & button {
+    cursor: pointer;
+    background-color: var(--text-accent);
+    color: var(--text-secondary);
+    border-radius: 10px;
+    font-size: 1.5rem;
+    margin: 20px auto;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    @media screen and (max-width: 800px) {
+      font-size: 1rem;
+      margin: 10px auto;
     }
+  }
 }
-p.description{
-    width: 60vw;
-    max-width: 800px;
-    font-size: 1.6rem;
-    margin: 80px auto;
-    &.centered{
-        text-align: center;
-    }
-    @media screen and (max-width: 500px){
-        width: calc(100vw - 40px);
-        margin: 40px auto;
-        font-size: 1.1rem;
-    }
-    @media screen and (max-width: 800px){
-        width: calc(100vw - 80px);
-    }
+p.description {
+  width: 60vw;
+  max-width: 800px;
+  font-size: 1.6rem;
+  margin: 80px auto;
+  &.centered {
+    text-align: center;
+  }
+  @media screen and (max-width: 500px) {
+    width: calc(100vw - 40px);
+    margin: 40px auto;
+    font-size: 1.1rem;
+  }
+  @media screen and (max-width: 800px) {
+    width: calc(100vw - 80px);
+  }
 }

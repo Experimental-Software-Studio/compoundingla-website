@@ -26,7 +26,7 @@ const App = ({history}) => {
 				<Route path={process.env.PUBLIC_URL + '/compounding'} component={Compounding} />
 				<Route path={process.env.PUBLIC_URL + '/immunization'} component={Immunization} />
 				<Route path={process.env.PUBLIC_URL + '/consultation'} component={Consultation} />
-				<Route path={process.env.PUBLIC_URL + '/testing'} component={Testing} />
+				<Route path={process.env.PUBLIC_URL + '/covid-testing'} component={Testing} />
 				<Route component={Home} />
 			</Switch>
 			<Footer />

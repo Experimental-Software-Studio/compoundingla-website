@@ -23,10 +23,10 @@ let services = [
         path: "/consultation"
     },
     {
-        title: "POINT OF CARE TESTING",
+        title: "COVID-19 TESTING",
         image: TestingImage,
         description: "We provide on-site point-of-care testing for COVID-19. Tests include detection of the novel coronavirus and antibodies. ",
-        path: "/testing"
+        path: "/covid-testing"
     }
 ];
 export default services;
