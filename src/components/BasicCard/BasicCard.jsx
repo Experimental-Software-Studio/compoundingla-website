@@ -11,7 +11,7 @@ const Media = ({ image, videoLink }) => {
   return null;
 };
 
-const BasicCard = ({ image, videoLink, title, children }) => {
+const BasicCard = ({ image, videoLink, title, caption, children }) => {
   return (
     <div className="basic-card--wrapper">
       <div className="info">
@@ -20,7 +20,10 @@ const BasicCard = ({ image, videoLink, title, children }) => {
         ))}
         {children}
       </div>
-      <Media image={image} videoLink={videoLink} />
+      <div className="basic-card--media-section">
+        <Media image={image} videoLink={videoLink} />
+        {caption && <p>{caption}</p>}
+      </div>
     </div>
   );
 };
