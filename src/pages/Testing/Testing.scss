@@ -1,4 +1,13 @@
 .testing--wrapper {
+  &.flyer-wrapper {
+    text-align: center;
+  }
+  & .flyer {
+    display: block;
+    width: 80%;
+    max-width: 500px;
+    margin: 0 auto;
+  }
   & p.description {
     text-align: center;
     &.test {

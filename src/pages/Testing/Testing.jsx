@@ -3,6 +3,9 @@ import HorizontalBanner from "../../components/HorizontalBanner";
 import PageHeader from "../../components/PageHeader";
 import BasicCard from "../../components/BasicCard";
 import TestingImageHeader from "../../assets/testing-header-min.jpg";
+import TestingFlyer from "../../assets/testing-flyer.jpg";
+import TestingDocument1 from "../../assets/testing-document-1.jpg";
+import TestingDocument2 from "../../assets/testing-document-2.jpg";
 import submitForm from "../../formSubmit";
 import "./Testing.scss";
 
@@ -12,6 +15,13 @@ const Testing = () => (
       pageTitle="RAPID COVID-19 TESTING"
       pageImage={TestingImageHeader}
     />
+
+    <img src={TestingFlyer} className="flyer" alt="covid flyer" />
+    <br />
+    <img src={TestingDocument1} className="flyer" alt="covid symptoms page 1" />
+    <br />
+    <img src={TestingDocument2} className="flyer" alt="covid symptoms page 2" />
+
     <p className="description">
       Rapid Point-of-Care test
       <br />
